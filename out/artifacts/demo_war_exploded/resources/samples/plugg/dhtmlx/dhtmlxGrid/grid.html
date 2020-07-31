@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxgrid.css" />
+	<link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn_bricks.css" />
+	<link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_skyblue.css" />
+	<link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/tdh/grid.css" />
+	<script type="text/javascript" src="../../../../static/lib/jquery.min.js" ></script>
+	<script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxcommon.js" ></script>
+	<script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxgrid.js" ></script>
+	<script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js" ></script>
+	<script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxgridcell.js" ></script>
+	<style>
+		*{ margin: 0 auto;}
+		html,body{ width: 100%; height: 100%; overflow: hidden;}
+	</style>
+</head>
+<body>
+	<table style="width:100%; height: 300px; border-collapse: collapse;">
+		<tr height="80">
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+				<div id="grid" style="width:100%; height:100%;"></div>
+			</td>
+		</tr>
+	</table>
+	<script>
+		$(function(){
+			$('#grid').height($('#grid').parent().height());
+			mygrid = new dhtmlXGridObject('grid');
+	        mygrid.setImagePath("../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/imgs/");
+	        mygrid.setHeader("<input type='checkbox' />,序号,案号,承办部门,承办人,详情");
+	        mygrid.setInitWidths("40,100,*,200,200,*");
+	        mygrid.setColTypes("ch,ro,ro,ro,ed,ro");
+	        mygrid.setColAlign("center,center,center,center,center,center");
+			mygrid.setSkin("dhx_skyblue");
+			mygrid.init();
+			mygrid.loadXML("grid.xml");
+		});
+        
+	</script>
+	<!--注释开始-->
+	<div style="background: #f0f0f0; border-top: 2px dashed #ddd; margin-top: 20px;">
+		<xmp><link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxgrid.css" /></xmp><br />
+		<xmp><link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/ext/dhtmlxgrid_pgn_bricks.css" /></xmp><br />
+		<xmp><link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/skins/dhtmlxgrid_dhx_skyblue.css" /></xmp><br />
+		<xmp><link rel="stylesheet" href="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/tdh/grid.css" /></xmp><br />
+		<xmp><script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxcommon.js" ></script></xmp><br />
+		<xmp><script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxgrid.js" ></script></xmp><br />
+		<xmp><script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/ext/dhtmlxgrid_filter.js" ></script></xmp><br />
+		<xmp><script type="text/javascript" src="../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/dhtmlxgridcell.js" ></script></xmp><br />
+		<br />
+		<xmp><div id="grid" style="width:100%; height:242px;"></div></xmp>
+		<xmp><script></xmp><br />
+	    <xmp>	mygrid = new dhtmlXGridObject('grid');</xmp><br />
+	    <xmp>	mygrid.setImagePath("../../../../static/plugg/dhtmlx/dhtmlxGrid/codebase/imgs/");</xmp><br />
+	    <xmp>	mygrid.setHeader("<input type='checkbox' />,序号,案号,承办部门,承办人,详情");</xmp><br />
+	    <xmp>	mygrid.setInitWidths("40,100,*,200,200,*");</xmp><br />
+	    <xmp>	mygrid.setColTypes("ch,ro,ro,ro,ro,ro");</xmp><br />
+	    <xmp>	mygrid.setColAlign("center,center,center,center,center,center");</xmp><br />
+		<xmp>	mygrid.setSkin("dhx_skyblue");</xmp><br />
+		<xmp>	mygrid.init();</xmp><br />
+		<xmp>	mygrid.loadXML("grid.xml");</xmp><br />
+		<xmp></script></xmp>
+	</div>
+	<!--注释结束-->
+</body>
+</html>

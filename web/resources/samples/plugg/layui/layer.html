@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<title></title>
+	<link rel="stylesheet" href="../../../static/tdh/btn/css/btn.css" />
+	<script type="text/javascript" src="../../../static/lib/jquery.min.js" ></script>
+	<script type="text/javascript" src="../../../static/tdh/btn/js/tdh.btn.js" ></script>
+	<link rel="stylesheet" href="../../../static/plugg/layui/css/modules/layer/default/layer.css">
+	<script type="text/javascript" src="../../../static/plugg/layui/lay/modules/layer.js" ></script>
+</head>
+<body style="padding: 10px; overflow-y: auto;">
+	<p>需引入的css、js(注：jquery版本需1.7以上)</p>
+	<xmp><script type="text/javascript" src="../../static/lib/jquery.min.js" ></script></xmp><br />
+	<xmp><link rel="stylesheet" href="../../../static/plugg/layui/css/modules/layer/default/layer.css"></xmp><br />
+	<xmp><script type="text/javascript" src="../../../static/plugg/layui/lay/modules/layer.js" ></script></xmp><br />
+	<br />
+	<p>示例</p>
+	<br />
+	<p><a id="test1" class="tdh_btn tdh_btn_blue">弹出提示层</a></p>
+	<br />
+	<xmp>$('#test1').on('click', function(){</xmp><br />
+	<xmp>	layer.msg('提示');</xmp><br />
+	<xmp>});</xmp><br />
+	<br />
+	<hr />
+	<br />
+	<p><a id="test2" class="tdh_btn tdh_btn_blue">弹出确认信息框</a></p>
+	<br />
+	<xmp>$('#test2').on('click', function(){</xmp><br />
+	<xmp>	layer.alert('确认信息');</xmp><br />
+	<xmp>});</xmp><br />
+	<br />
+	<hr />
+	<br />
+	<p><a id="test3" class="tdh_btn tdh_btn_blue">弹出询问框</a></p>
+	<br />
+	<xmp>$('#test3').on('click', function(){</xmp><br />
+	<xmp>	layer.confirm('你确定吗？', {</xmp><br />
+	<xmp>		btn: ['确定','取消'];</xmp><br />
+	<xmp>	}, function(){</xmp><br />
+	<xmp>		layer.msg('你先择了确定');</xmp><br />
+	<xmp>	}, function(){</xmp><br />
+	<xmp>		layer.msg('你先择了取消');</xmp><br />
+	<xmp>	});</xmp><br />
+	<xmp>});</xmp><br />
+	<br />
+	<hr />
+	<br />
+	<p><a id="test4" class="tdh_btn tdh_btn_blue">弹出页面层</a></p>
+	<br />
+	<xmp>$('#test4').on('click', function(){</xmp><br />
+	<xmp>	layer.open({</xmp><br />
+	<xmp>		type: 1,</xmp><br />
+	<xmp>		area: ['600px', '360px'],</xmp><br />
+	<xmp>		shadeClose: true, //点击遮罩关闭</xmp><br />
+	<xmp>		content: '\<\div style="padding:20px;">自定义内容\<\/div>',</xmp><br />
+	<xmp>		btn: '确定'</xmp><br />
+	<xmp>	});</xmp><br />
+	<xmp>});</xmp><br />
+	<br />
+	<hr />
+	<br />
+	<p><a id="test5" class="tdh_btn tdh_btn_blue">弹出iframe层</a></p>
+	<br />
+	<xmp>$('#test5').on('click', function(){</xmp><br />
+	<xmp>	layer.open({</xmp><br />
+	<xmp>		type: 2,</xmp><br />
+	<xmp>		title: 'iframe页',</xmp><br />
+	<xmp>		shadeClose: true,</xmp><br />
+	<xmp>		shade: 0.8,</xmp><br />
+	<xmp>		area: ['80%', '90%'],</xmp><br />
+	<xmp>		content: 'tips.html',</xmp> //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['iframe的url', 'no']<br />
+	<xmp>		cancel:function(index, layero){</xmp><br />
+	<xmp>			var body = layer.getChildFrame('body', index);</xmp>//获取iframe页的body<br />
+    <xmp>           var texst=body.find("#poshytip").val();</xmp>//操作iframe页的元素<br />
+    <xmp>           alert(texst);</xmp><br />
+	<xmp>		}</xmp><br />
+	<xmp>	}); </xmp><br />
+	<xmp>});</xmp><br />
+	<br />
+	<hr />
+	<br />
+	<p><a id="test6" class="tdh_btn tdh_btn_blue">弹出可最大最小化窗口</a></p>
+	<br />
+	<xmp>$('#test6').on('click', function(){</xmp><br />
+	<xmp>	layer.open({</xmp><br />
+	<xmp>		type: 2,</xmp><br />
+	<xmp>		area: ['700px', '450px'],</xmp><br />
+	<xmp>		fixed: false, //不固定</xmp><br />
+	<xmp>		maxmin: true,</xmp><br />
+	<xmp>		content: 'form.html'</xmp><br />
+	<xmp>	}); </xmp><br />
+	<xmp>});</xmp><br /><br />
+	<hr />
+	<br />
+	<p><a id="test7" class="tdh_btn tdh_btn_blue">弹出加载层</a></p>
+	<br />
+	<xmp>$('#test7').on('click', function(){</xmp><br />
+	<xmp>	layer.msg('加载中', {</xmp><br />
+	<xmp>		icon: 16,</xmp><br />
+	<xmp>		shade: 0.8,</xmp><br />
+	<xmp>		time: 0</xmp><br />
+	<xmp>	});</xmp><br />
+	<xmp>});</xmp><br />
+	<xmp>//layer.closeAll();关闭弹出框</xmp><br />
+	<p>回调方法</p>
+	<br />
+	<p>success - 层弹出后的成功回调方法。</p>
+	<p>类型：Function，默认：null</p>
+	<p>当你需要在层创建完毕时即执行一些语句，可以通过该回调。success会携带两个参数，分别是当前层的DOM对象（layero）、当前层索引参数（index）。如：</p>
+	<xmp>success: function(layero, index){</xmp><br />
+    <xmp>	console.log(layero, index);</xmp><br />
+	<xmp>}</xmp><br />
+	<br />
+	<p>cancel - 右上角关闭按钮触发的回调</p>
+	<p>类型：Function，默认：null</p>
+	<p>该回调携带两个参数，分别为：当前层索引参数（index）、当前层的DOM对象（layero），默认会自动触发关闭。如果不想关闭，return false即可，如：</p>
+	<xmp>cancel: function(index, layero){ </xmp><br />
+	<xmp>	if(confirm('确定要关闭么')){ //只有当点击confirm框的确定时，该层才会关闭</xmp><br />
+	<xmp>		layer.close(index);</xmp><br />
+	<xmp>	}</xmp><br />
+  	<xmp>	return false; </xmp><br />
+	<xmp>}</xmp><br />
+	<br />
+	<p>end - 层销毁后触发的回调</p>
+	<p>类型：Function，默认：null</p>
+	<p>无论是确认还是取消，只要层被销毁了，end都会执行，不携带任何参数。</p>
+	<script>
+		$(function(){
+			$('#test1').on('click', function(){
+				layer.msg('提示');
+			});
+			$('#test2').on('click', function(){
+				layer.alert('确认信息');
+			});
+			$('#test3').on('click', function(){
+				layer.confirm('你确定吗？', {
+					btn: ['确定','取消']
+				}, function(){
+					layer.msg('你先择了确定');
+				}, function(){
+					layer.msg('你先择了取消');
+				});
+			});
+			$('#test4').on('click', function(){
+				layer.open({
+					type: 1,
+					area: ['600px', '360px'],
+					shadeClose: true, //点击遮罩关闭
+					content: '\<\div style="padding:20px;">自定义内容\<\/div>',
+					btn: '确定'
+				});
+			});
+			$('#test5').on('click', function(){
+				layer.open({
+					type: 2,
+					title: 'iframe页',
+					shadeClose: true,
+					shade: 0.8,
+					area: ['80%', '90%'],
+					content: 'tips.html',
+					cancel:function(index, layero){
+						//var body = layer.getChildFrame('body', index);//获取iframe页的body
+                        //var texst=body.find("#poshytip").val();//操作iframe页也的元素
+                        //alert(texst);
+					}
+				}); 
+			});
+			$('#test6').on('click', function(){
+				layer.open({
+					type: 2,
+					area: ['700px', '450px'],
+					fixed: false, //不固定
+					maxmin: true,
+					content: 'form.html'
+				}); 
+			});
+			$('#test7').on('click', function(){
+				layer.msg('加载中', {
+					icon: 16,
+					shade: 0.8,
+					time: 0
+				});
+			});
+			//layer.closeAll();关闭弹出框
+		});
+	</script>
+</body>
+</html>

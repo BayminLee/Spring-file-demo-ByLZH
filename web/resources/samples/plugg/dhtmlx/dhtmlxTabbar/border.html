@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=5;" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/dhtmlxtabbar.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/tdh/border.css">
+	<script  src="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/dhtmlxcommon.js"></script>
+	<script  src="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/tdh/border.js"></script>
+	<style>
+		*{ margin: 0 auto;}
+		html,body{ width: 100%; height: 100%; overflow: hidden;}
+	</style>
+</head>
+<body>
+	<div id="a_tabbar" style="width:100%; height:400px;"/>
+	<div id='html_1'>123</div>
+	<div id='html_2'>456</div>
+	<script>
+		//插件使用
+		tabbar = new dhtmlXTabBar("a_tabbar", "top");
+		tabbar.addTab("a1", "Tab 1-1");
+		tabbar.addTab("a2", "Tab 1-2");
+		tabbar.addTab("a3", "Tab 1-3");
+		tabbar.setContent("a1", "html_1");
+		tabbar.setContent("a2", "html_2");
+		tabbar.setContentHTML("a3", "<br/>The content can be set as <b>HTML</b> node or as <b>HTML</b> text.");
+		tabbar.setTabActive("a1");
+	</script>
+	<!--注释开始-->
+	<div style="background: #f0f0f0; border-top: 2px dashed #ddd; margin-top: 20px;">
+		<xmp><link rel="stylesheet" type="text/css" href="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/dhtmlxtabbar.css"></xmp>
+		<xmp><link rel="stylesheet" type="text/css" href="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/tdh/border.css"></xmp>
+		<xmp><script  src="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/dhtmlxcommon.js"></script></xmp>
+		<xmp><script  src="../../../../static/plugg/dhtmlx/dhtmlxTabbar/codebase/tdh/border.js"></script></xmp>
+		<br />
+		<xmp><div id="a_tabbar" style="width:100%; height:400px;"/></xmp>
+		<xmp><div id='html_1'>123</div></xmp>
+		<xmp><div id='html_2'>456</div></xmp>
+		<xmp><script></xmp>
+		<xmp>	tabbar = new dhtmlXTabBar("a_tabbar", "top");</xmp>
+		<xmp>	tabbar.addTab("a1", "Tab 1-1");</xmp>
+		<xmp>	tabbar.addTab("a2", "Tab 1-2");</xmp>
+		<xmp>	tabbar.addTab("a3", "Tab 1-3");</xmp>
+		<xmp>	tabbar.setContent("a1", "html_1");</xmp>
+		<xmp>	tabbar.setContent("a2", "html_2");</xmp>
+		<xmp>	tabbar.setContentHTML("a3", "<br/>The content can be set as <b>HTML</b> node or as <b>HTML</b> text.");</xmp>
+		<xmp>	tabbar.setTabActive("a1");</xmp>
+		<xmp></script></xmp>
+	</div>
+	<!--注释结束-->
+</body>
+</html>

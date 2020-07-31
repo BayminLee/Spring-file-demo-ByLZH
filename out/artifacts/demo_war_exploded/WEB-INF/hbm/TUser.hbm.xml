@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="tdh.demo.po.TUser" table="T_USER" >
+        <id name="yhdm" type="java.lang.String">
+            <column name="YHDM" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="dwdm" type="java.lang.String">
+            <column name="DWDM" length="6" />
+        </property>
+        <property name="yhid" type="java.lang.String">
+            <column name="YHID" length="14" />
+        </property>
+        <property name="yhxm" type="java.lang.String">
+            <column name="YHXM" length="40" />
+        </property>
+        <property name="yhkl" type="java.lang.String">
+            <column name="YHKL" length="20" />
+        </property>
+        <property name="yhxb" type="java.lang.String">
+            <column name="YHXB" length="20" />
+        </property>
+        <property name="yhbm" type="java.lang.String">
+            <column name="YHBM" length="20" />
+        </property>
+        <property name="csrq" type="java.lang.String">
+            <column name="CSRQ" length="8" />
+        </property>
+        <property name="djsj" type="java.lang.String">
+            <column name="DJSJ" length="19" />
+        </property>
+        <property name="pxh" type="java.lang.Integer">
+            <column name="PXH" />
+        </property>
+        <property name="sfjy" type="java.lang.String">
+            <column name="SFJY" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>
